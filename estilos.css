@@ -6,446 +6,521 @@
 @font-face { font-family: 'fuzzy';  src: url('/font/fuzzy.ttf') format('eot'), url('/font/fuzzy.ttf') format('woff'), url('/font/fuzzy.ttf') format('truetype');}
 @import url('/font/IndieFlower-Regular.ttf');
 
-/* declaro como flex  */
-.titulo{
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;    
+.logo{
+    animation-name: movimiento;
+    animation-duration: 3s;
+    animation-iteration-count: initial;
 }
-/* declaro como flex  */
-.encabezado{
-    width: 100%;
-    height: 70px;
-    background-color: #c8d144;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.principal{
-    width: 100%;
-    height: 450px;
-    background-color: rgb(125, 121, 126);
-}
-
-
-.main__nav li{
-    padding: 5px 10px;
-    background-color:#fff;
-    border: 1px solid black;
-    border-radius: 10px;
-    color:5px;
-}
-.main__nav a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 16px;
-}
-/* declaro como flex  */
-.pie{
-    width: 100%;
-    background-color: #4e4e4e96;
-    display: flex;
-    align-content: stretch;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-/* declaro como flex  */
-.contenedor{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family:'Indie Flower', cursive;
-    color:black;
-    font-weight: bold; 
-}
-
-.experiencia{
-    width: 30%;
-    max-height:400px;
-    background-color: #c8d144;
-    margin-left: 15px;
-    border: 3px solid black;
-    margin-top: 27px;
-    font-size: larger;
-    text-align: center;
-    
-}
-
-.alma{
-    width: 30%;
-    max-height:400px;
-    background-color: #c8d144;
-    justify-content: center;
-    margin-left: 15px;
-    text-align: center;
-    font-size: larger; 
-    border: 3px solid black; 
-    margin-top: 27px;
-}
-
-.chino{
+/* Agrego movimiento al logo */
+@keyframes movimiento{
+    0%{
+     margin-left: 0px;
+     } 
+ 
+     100%{
+         margin-left: 700px;
+     }
+ }
+ /* declaro como flex  */
+ .titulo{
+     color: white;
+     display: flex;
+     flex-wrap: wrap;
+     text-align: center;    
+ }
+ /* declaro como flex  */
+ .encabezado{
+     width: 100%;
+     height: 70px;
+     background-color: white;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .principal{
+     width: 100%;
+     height: 450px;
+     background-image: linear-gradient(to bottom, grey, rgb(22, 22, 4));
+ }
+ 
+ 
+ .main__nav li{
+     padding: 5px 10px;
+     background-color:rgb(22, 20, 20);
+     border: 1px solid white;
+     border-radius: 10px;
+     color:white;
+     transition: linear;
+ }
+ 
+ .main__nav li:hover{
+     background-color:rgb(182, 167, 167);
+ }
+ .main__nav a {
+     text-decoration: none;
+     color: inherit;
+     font-size: 16px;
+ }
+ /* declaro como flex  */
+ .pie{
+     width: 100%;
+     background-image: linear-gradient(to top, grey, rgb(22, 22, 4));
+     display: flex;
+     align-content: stretch;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     color: white;
+ }
+ /* declaro como flex  */
+ .contenedor{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     font-family:'Indie Flower', cursive;
+     color:black;
+     font-weight: bold; 
+ }
+ 
+ .experiencia{
      width: 30%;
      max-height:400px;
-    background-color: #c8d144;
-    margin-left: 15px;
-    border: 3px solid black;
-    margin-top: 27px;
-    font-size: larger;
-    text-align: center;
-    font-family:'Indie Flower', cursive;
-}
-
-
-/* declaro como flex  */
-.quienes{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    font-family:'Indie Flower', cursive;
-    color:blanchedalmond;
-    justify-content: space-between;
-    padding: 20px;   
-}
-.quienes p{
-    width: 50%;
-    height: auto;
-}
-.quienes img{
-    width: 50%;
-    height: auto;
-    border: 4px solid white;
-}
-
-/* declaro el grid con las filas y columnas */
-.productos{
-    height: auto;
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 200px 180px 180px 120px;
-	grid-template-rows: 120px 180px 120px;
-    padding: 40px;
-    gap: 10px;
-}
-.img{
-    background-color: violet;
-    border: 2px solid black ;
-}
-
-/* acomodo las imagenes en las filas y columnas */
-.img1{
-    grid-column: 1/2;
-    grid-row: 1/4;
-    background-image: url(./img/carcaza.webp);
-    background-size: cover;
-    background-position: center;
-}
-.img2{
-    grid-column: 2/4;
-    grid-row: 1/2;
-    background-image: url(./img/bloque.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.img3{
-    grid-column: 4/5;
-    grid-row: 1/2;
-    background-image: url(./img/peltier.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.img4{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    background-image: url(./img/manguera.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.img5{
-    grid-column: 3/4;
-    grid-row: 2/3;
-    background-image: url(./img/cabezal.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.img6{
-    grid-column: 4/5;
-    grid-row: 2/4;
-    background-image: url(./img/zafiro.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.img7{
-    grid-column: 2/4;
-    grid-row: 3/4;
-    background-image: url(./img/bomba.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-
-.contenedorf{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    font-family:'Indie Flower', cursive;
-    text-align: center;
-    color:blanchedalmond;
-    padding: 50px;
-}
-
-.formulario{
-    border: 6px solid black;
-}
-/* parte de media query desde 360px a 442px de ancho */
-@media only screen and (min-width: 360px) and (max-width: 442px) {
-    .principal{
-        height: auto;
-    }
-    .encabezado{
-        height: auto;
-        font-family: fuzzy;
-        flex-direction: column;
-    } 
-    .main__nav li{
-        display: block;
-    }
-    .titulo h1{
-        width: 360;
-        min-height: 450px;
-    }
-    .pie{
-        height: auto;
-        flex-direction: column;
-    }
-    .quienes{
-        height: auto;
-        flex-direction: column;    
-    }
-    .contenedor{
-        height: auto;
-        justify-content: center;
-        flex-direction: column;
-        align-content: center;
-    }
-    .chino{
-        width: 360px;
-        height: auto;
-    }
-   .alma{
-        width: 360px;
-        height: auto;
-    }
-   .experiencia{
-        width: 360px;
-        height: auto;  
-    }
-   .contenedorf{
-        flex-direction: column;
-        margin-top: 0px;    
-    }
-    .productos{
-        grid-template-columns: 200px 200px ;
-        grid-template-rows: 120px 180px 120px 120px 180px 120px;
-        padding: 5px;
-        gap: 10px;
-        justify-content: center;
-    } 
-    .img1{
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-    .img2{
-        grid-column: 1/3;
-        grid-row: 4/5;
-    }
-    .img3{
-        grid-column: 1/2;
-        grid-row: 6/7;
-    }
-    .img4{
-        grid-column: 1/2;
-        grid-row: 5/6;
-    }
-    .img5{
-        grid-column: 2/3;
-        grid-row: 5/6;    
-    }
-    .img6{
-        grid-column: 2/3;
-        grid-row: 1/4;
-    }
-    .img7{
-        grid-column: 2/3;
-        grid-row: 5/6;
-    }   
-}
-/* parte de media query desde 443x a 878px de ancho */
-@media only screen and (min-width: 443px) and (max-width:878px) {
-    .principal{
-        height: auto;
-    }
-    .encabezado{
-        height: auto;
-        flex-direction: column;
-    }
-    .main__nav li{
-        display: inline-block;
-    }
-    .titulo h1{
-        width: 360;
-        min-height: 450px;
-    }
-    .pie{
-        height: auto;
-        flex-direction: row;
-    }
-    .contenedor{
-        height: auto;
-        justify-content: center;
-        flex-direction: column;
-        align-content: center;
-    }
-    .chino{
-        width: 360px;
-        height: auto;
-    }
-   .alma{
-        width: 360px;
-        height: auto;
-    }
-   .experiencia{
-        width: 360px;
-        height: auto;
-    }
-    .productos{
-        grid-template-columns: 200px 200px ;
-        grid-template-rows: 120px 180px 120px 120px 180px 120px;
-        padding: 5px;
-        gap: 10px;
-        justify-content: center;
-    } 
-    .img1{
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-    .img2{
-        grid-column: 1/3;
-        grid-row: 4/5;
-    }
-    .img3{
-        grid-column: 1/2;
-        grid-row: 6/7;
-    }
-
-    .img4{
-        grid-column: 1/2;
-        grid-row: 5/6;
-    }
-    .img5{
-        grid-column: 2/3;
-        grid-row: 5/6;
-        }
-    .img6{
-        grid-column: 2/3;
-        grid-row: 1/4;
-    }
-    .img7{
-        grid-column: 2/3;
-        grid-row: 5/6;
-    }
-    .quienes{
-        flex-direction: column;    
-    }
-}
-/* parte de media query desde 879px en adelante*/
-@media only screen and (min-width: 879px){
-    .principal{
-        height: 521px;
-    }
-    .titulo{
-        flex-direction: column;   
-    }
+     background-color: #c8d144;
+     margin-left: 15px;
+     border: 3px solid black;
+     margin-top: 27px;
+     font-size: larger;
+     text-align: center;
+     
+ }
+ 
+ .alma{
+     width: 30%;
+     max-height:400px;
+     background-color: #c8d144;
+     justify-content: center;
+     margin-left: 15px;
+     text-align: center;
+     font-size: larger; 
+     border: 3px solid black; 
+     margin-top: 27px;
+ }
+ 
+ .chino{
+      width: 30%;
+      max-height:400px;
+     background-color: #c8d144;
+     margin-left: 15px;
+     border: 3px solid black;
+     margin-top: 27px;
+     font-size: larger;
+     text-align: center;
+     font-family:'Indie Flower', cursive;
+ }
+ 
+ 
+ /* declaro como flex  */
+ .quienes{
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     text-align: center;
+     font-family:'Indie Flower', cursive;
+     color:blanchedalmond;
+     justify-content: space-between;
+     padding: 20px;   
+ }
+ .quienes p{
+     width: 50%;
+     height: auto;
+ }
+ .quienes img{
+     width: 50%;
+     height: auto;
+     border: 4px solid white;
+ }
+ 
+ /* declaro el grid con las filas y columnas */
+ .productos{
+     height: auto;
+     width: 100%;
+     display: grid;
+     justify-content: center;
+     grid-template-columns: 200px 180px 180px 120px;
+     grid-template-rows: 120px 180px 120px;
+     padding: 40px;
+     gap: 10px;
+     
+ 
+ }
+ .img{
+     background-color: violet;
+     border: 2px solid black ;
+     border-radius: 10px;
+     
+ }
+ 
+ /* acomodo las imagenes en las filas y columnas */
+ .img1{
+     grid-column: 1/2;
+     grid-row: 1/4;
+     background-image: url(./img/carcaza.webp);
+     background-size: cover;
+     background-position: center;
+     transition: 1s ;
+   
+     
+ }
+ 
+ .img1:hover{
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
+ }
+ .img2{
+     grid-column: 2/4;
+     grid-row: 1/2;
+     background-image: url(./img/bloque.jpg);
+     background-size: cover;
+     background-position: center;
+     transition: 1s;
+     
+ }
+ 
+ .img2:hover{
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
+ }
+ 
+ .img3{
+     grid-column: 4/5;
+     grid-row: 1/2;
+     background-image: url(./img/peltier.jpg);
+     background-size: cover;
+     background-position: center;
+     transition: 1s;
+     
+ }
+ 
+ .img3:hover{
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
+ }
+ 
+ .img4{
+     grid-column: 2/3;
+     grid-row: 2/3;
+     background-image: url(./img/manguera.jpg);
+     background-size: cover;
+     background-position: center;
+     transition: 1s;
+ }
+ 
+ .img4:hover{
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
+ }
+ .img5{
+     grid-column: 3/4;
+     grid-row: 2/3;
+     background-image: url(./img/cabezal.jpg);
+     background-size: cover;
+     background-position: center;
+     transition: 1s;
+     
+ }
+ 
+ .img5:hover{
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
+ }
+ .img6{
+     grid-column: 4/5;
+     grid-row: 2/4;
+     background-image: url(./img/zafiro.jpg);
+     background-size: cover;
+     background-position: center;
+     transition: 1s ;
     
-    .encabezado{
-        flex-direction: row;
-    }
-    
-    .main__nav li{
-        display: inline;
-    }
-
-    .pie{
-        height:auto;
-        flex-direction: row;
-    }
-    
-    .contenedor{
-        flex-direction: row;
-    
-    }
-    
-    .quienes{
-        flex-direction: row;    
-    }
-    
-    .productos{
-
-        grid-template-columns: 200px 180px 180px 120px;
-        grid-template-rows: 120px 180px 120px;
-    }
-    
-    .img{
-        background-color: violet;
-        border: 2px solid black ;
-    }
-    
-    .img1{
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-
-    .img2{
-        grid-column: 2/4;
-        grid-row: 1/2;
-    }
-    
-    .img3{
-        grid-column: 4/5;
-        grid-row: 1/2;
-    }
-    
-    .img4{
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-    .img5{
-        grid-column: 3/4;
-        grid-row: 2/3;
-    }
-
-    .img6{
-        grid-column: 4/5;
-        grid-row: 2/4;
-    }
-
-    .img7{
-        grid-column: 2/4;
-        grid-row: 3/4;
-    }
-    
+ }
+ 
+ .img6:hover{
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
+ }
+ .img7{
+     grid-column: 2/4;
+     grid-row: 3/4;
+     background-image: url(./img/bomba.jpg);
+     background-size: cover;
+     background-position: center;
+     transition: 1s ;
+     
+ }
+ 
+ .img7:hover{
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
+ }
+ 
+ 
+ .contenedorf{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: space-evenly;
+     font-family:'Indie Flower', cursive;
+     text-align: center;
+     color:blanchedalmond;
+     padding: 50px;
+ }
+ 
+ .formulario{
+     border: 6px solid black;
+ }
+ /* parte de media query desde 360px a 442px de ancho */
+ @media only screen and (min-width: 360px) and (max-width: 442px) {
+     .principal{
+         height: auto;
+     }
+     .encabezado{
+         height: auto;
+         font-family: fuzzy;
+         flex-direction: column;
+     } 
+     .main__nav li{
+         display: block;
+     }
+     .titulo h1{
+         width: 360;
+         min-height: 450px;
+     }
+     .pie{
+         height: auto;
+         flex-direction: column;
+     }
+     .quienes{
+         height: auto;
+         flex-direction: column;    
+     }
+     .contenedor{
+         height: auto;
+         justify-content: center;
+         flex-direction: column;
+         align-content: center;
+     }
+     .chino{
+         width: 360px;
+         height: auto;
+     }
+    .alma{
+         width: 360px;
+         height: auto;
+     }
+    .experiencia{
+         width: 360px;
+         height: auto;  
+     }
     .contenedorf{
-        flex-direction: row;
-    }
-}
-
-
+         flex-direction: column;
+         margin-top: 0px;    
+     }
+     .productos{
+         grid-template-columns: 200px 200px ;
+         grid-template-rows: 120px 180px 120px 120px 180px 120px;
+         padding: 5px;
+         gap: 10px;
+         justify-content: center;
+     } 
+     .img1{
+         grid-column: 1/2;
+         grid-row: 1/4;
+     }
+     .img2{
+         grid-column: 1/3;
+         grid-row: 4/5;
+     }
+     .img3{
+         grid-column: 1/2;
+         grid-row: 6/7;
+     }
+     .img4{
+         grid-column: 1/2;
+         grid-row: 5/6;
+     }
+     .img5{
+         grid-column: 2/3;
+         grid-row: 5/6;    
+     }
+     .img6{
+         grid-column: 2/3;
+         grid-row: 1/4;
+     }
+     .img7{
+         grid-column: 2/3;
+         grid-row: 5/6;
+     }   
+ }
+ /* parte de media query desde 443x a 878px de ancho */
+ @media only screen and (min-width: 443px) and (max-width:878px) {
+     .principal{
+         height: auto;
+     }
+     .encabezado{
+         height: auto;
+         flex-direction: column;
+     }
+     .main__nav li{
+         display: inline-block;
+     }
+     .titulo h1{
+         width: 360;
+         min-height: 450px;
+     }
+     .pie{
+         height: auto;
+         flex-direction: row;
+     }
+     .contenedor{
+         height: auto;
+         justify-content: center;
+         flex-direction: column;
+         align-content: center;
+     }
+     .chino{
+         width: 360px;
+         height: auto;
+     }
+    .alma{
+         width: 360px;
+         height: auto;
+     }
+    .experiencia{
+         width: 360px;
+         height: auto;
+     }
+     .productos{
+         grid-template-columns: 200px 200px ;
+         grid-template-rows: 120px 180px 120px 120px 180px 120px;
+         padding: 5px;
+         gap: 10px;
+         justify-content: center;
+     } 
+     .img1{
+         grid-column: 1/2;
+         grid-row: 1/4;
+     }
+     .img2{
+         grid-column: 1/3;
+         grid-row: 4/5;
+     }
+     .img3{
+         grid-column: 1/2;
+         grid-row: 6/7;
+     }
+ 
+     .img4{
+         grid-column: 1/2;
+         grid-row: 5/6;
+     }
+     .img5{
+         grid-column: 2/3;
+         grid-row: 5/6;
+         }
+     .img6{
+         grid-column: 2/3;
+         grid-row: 1/4;
+     }
+     .img7{
+         grid-column: 2/3;
+         grid-row: 5/6;
+     }
+     .quienes{
+         flex-direction: column;    
+     }
+ }
+ /* parte de media query desde 879px en adelante*/
+ @media only screen and (min-width: 879px){
+     .principal{
+         height: 521px;
+     }
+     .titulo{
+         flex-direction: column;   
+     }
+     
+     .encabezado{
+         flex-direction: row;
+     }
+     
+     .main__nav li{
+         display: inline;
+     }
+ 
+     .pie{
+         height:auto;
+         flex-direction: row;
+     }
+     
+     .contenedor{
+         flex-direction: row;
+     
+     }
+     
+     .quienes{
+         flex-direction: row;    
+     }
+     
+     .productos{
+ 
+         grid-template-columns: 200px 180px 180px 120px;
+         grid-template-rows: 120px 180px 120px;
+     }
+     
+     .img{
+         background-color: violet;
+         border: 2px solid black ;
+     }
+     
+     .img1{
+         grid-column: 1/2;
+         grid-row: 1/4;
+     }
+ 
+     .img2{
+         grid-column: 2/4;
+         grid-row: 1/2;
+     }
+     
+     .img3{
+         grid-column: 4/5;
+         grid-row: 1/2;
+     }
+     
+     .img4{
+         grid-column: 2/3;
+         grid-row: 2/3;
+     }
+ 
+     .img5{
+         grid-column: 3/4;
+         grid-row: 2/3;
+     }
+ 
+     .img6{
+         grid-column: 4/5;
+         grid-row: 2/4;
+     }
+ 
+     .img7{
+         grid-column: 2/4;
+         grid-row: 3/4;
+     }
+     
+     .contenedorf{
+         flex-direction: row;
+     }
+ }
+ 
+ 
+ 
